@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
 
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        title: "Ebrahim Tarek | Flutter Developer",
 
         home: MainScreen(),
       ),
