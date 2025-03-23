@@ -6,6 +6,16 @@ import 'package:portfolio/main/ui/main_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        systemNavigationBarDividerColor: Colors.transparent,
+        systemNavigationBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        systemNavigationBarIconBrightness: Brightness.light
+      )
+  );
+
   runApp(
     ChangeNotifierProvider<MainProvider>(
       create: (context) => MainProvider(),
@@ -19,8 +29,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(1920, 953),
+    return const ScreenUtilInit(
+      designSize: Size(1920, 953),
       minTextAdapt: true,
       splitScreenMode: true,
 
@@ -28,17 +38,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: "Ebrahim Tarek | Flutter Developer",
 
-        theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: Colors.transparent,
-              systemNavigationBarColor: Colors.transparent,
-              systemNavigationBarDividerColor: Colors.transparent
-            )
-          )
-        ),
-
-        home: const MainScreen(),
+        home: MainScreen(),
       ),
     );
   }
