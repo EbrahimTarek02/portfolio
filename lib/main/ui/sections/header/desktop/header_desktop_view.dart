@@ -112,22 +112,64 @@ class HeaderDesktopView extends StatelessWidget {
                       const SizedBox(width: 10),
 
                       IconButton(
-                        onPressed: () {
-                          try {
-                            launchUrl(Uri.parse("mailto:ebrahimtarek2002@gmail.com"), mode: LaunchMode.externalApplication);
-                          }
-                          catch (_) {
-                            showDialog(context: context, builder: (context) => DefaultAlertDialog(
-                              context: context,
-                              title: "Error",
-                              description: "Something went wrong. Please, try again later.",
-                            ));
-                          }
-                        },
+                          onPressed: () {
+                            try {
+                              launchUrl(Uri.parse("mailto:ebrahimtarek2002@gmail.com"), mode: LaunchMode.externalApplication);
+                            }
+                            catch (_) {
+                              showDialog(context: context, builder: (context) => DefaultAlertDialog(
+                                context: context,
+                                title: "Error",
+                                description: "Something went wrong. Please, try again later.",
+                              ));
+                            }
+                          },
 
-                        style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondaryBackgroundColor),
+                          style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondaryBackgroundColor),
 
-                        icon: const Icon(Icons.email, color: AppColors.primaryColor, size: 20)
+                          icon: const Icon(Icons.email, color: AppColors.primaryColor, size: 20)
+                      ),
+
+                      const SizedBox(width: 10),
+
+                      IconButton(
+                          onPressed: () {
+                            try {
+                              launchUrl(Uri.parse("https://wa.me/+201122935123"), mode: LaunchMode.externalApplication);
+                            }
+                            catch (_) {
+                              showDialog(context: context, builder: (context) => DefaultAlertDialog(
+                                context: context,
+                                title: "Error",
+                                description: "Something went wrong. Please, try again later.",
+                              ));
+                            }
+                          },
+
+                          style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondaryBackgroundColor),
+
+                          icon: const DefaultImage(image: AppAssets.whatsappIcon, iconColor: AppColors.primaryColor, height: 20)
+                      ),
+
+                      const SizedBox(width: 10),
+
+                      IconButton(
+                          onPressed: () {
+                            try {
+                              launchUrl(Uri.parse("tel:+201122935123"));
+                            }
+                            catch (_) {
+                              showDialog(context: context, builder: (context) => DefaultAlertDialog(
+                                context: context,
+                                title: "Error",
+                                description: "Something went wrong. Please, try again later.",
+                              ));
+                            }
+                          },
+
+                          style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondaryBackgroundColor),
+
+                          icon: const Icon(Icons.call, color: AppColors.primaryColor, size: 20)
                       ),
 
                       const SizedBox(width: 10),

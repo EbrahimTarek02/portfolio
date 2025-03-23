@@ -94,41 +94,7 @@ class AboutMeSection extends StatelessWidget {
                         )
                     ),
 
-                    const TextSpan(text: " in 2024, and since then, I’ve been focused on growing my expertise in mobile app development with Flutter.\n\nDuring my "),
-
-                    TextSpan(
-                        text: "internship at ABS.AI Technologies",
-
-                        style: GoogleFonts.aBeeZee(
-                            fontSize: context.width > 800 ? 16 : 14,
-                            color: AppColors.primaryColor
-                        )
-                    ),
-
-                    const TextSpan(text: ", I gained valuable hands-on experience in developing and deploying apps, enhancing my problem-solving and coding abilities. Currently, I’m working as a "),
-
-                    TextSpan(
-                        text: "Flutter Developer at Zazome",
-
-                        style: GoogleFonts.aBeeZee(
-                            fontSize: context.width > 800 ? 16 : 14,
-                            color: AppColors.primaryColor
-                        )
-                    ),
-
-                    const TextSpan(text: " since November 2024, where I continue to build high-performance, cross-platform applications.\n\nI also completed an intensive "),
-
-                    TextSpan(
-                        text: "Flutter course at Route Academy",
-
-                        style: GoogleFonts.aBeeZee(
-                          fontSize: context.width > 800 ? 16 : 14,
-                          color: AppColors.primaryColor
-                        ),
-                    ),
-
-                    const TextSpan(text: ", which allowed me to refine my skills in Dart and Flutter development, enabling me to create clean, scalable, and efficient mobile solutions.\n\nI’m deeply passionate about creating seamless user experiences and constantly learning new technologies to stay ahead of industry trends. Feel free to explore my portfolio and see the projects I’ve worked on!\n\nLet's build something unforgettable! 🚀"),
-
+                    const TextSpan(text: " in 2024, and since then, I’ve been focused on growing my expertise in mobile app development with Flutter.\n\nI’m deeply passionate about creating seamless user experiences and constantly learning new technologies to stay ahead of industry trends. Feel free to explore my portfolio and see the projects I’ve worked on!\n\nLet's build something unforgettable! 🚀"),
                   ]
               ),
 

@@ -11,4 +11,5 @@ abstract class AppAssets {
   static const String githubIcon = "${_imagesPath}github_icon.svg";
   static const String googlePlayIcon = "${_imagesPath}google_play_icon.svg";
   static const String appStoreIcon = "${_imagesPath}app_store_icon.svg";
+  static const String whatsappIcon = "${_imagesPath}whatsapp_icon.svg";
 }

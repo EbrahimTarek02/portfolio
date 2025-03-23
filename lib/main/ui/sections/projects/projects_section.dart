@@ -29,14 +29,14 @@ class ProjectsSection extends StatelessWidget {
         duration: const Duration(milliseconds: 1500),
 
         child: Column(
+          key: context.read<MainProvider>().projectsAnimationKey,
+
           crossAxisAlignment: CrossAxisAlignment.stretch,
 
           children: [
             SizedBox(height: context.height * 0.1),
 
             Row(
-              key: context.read<MainProvider>().projectsAnimationKey,
-
               children: [
                 const Icon(
                   Icons.folder_outlined,

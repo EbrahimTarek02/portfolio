@@ -81,35 +81,39 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
             controller: mainProvider.controller,
             padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 32),
 
-            child: AnimatedPadding(
-              duration: const Duration(milliseconds: 1500),
+            child: Consumer<MainProvider>(
+              builder: (context, consumerMainProvider, _) {
+               return AnimatedPadding(
+                 duration: const Duration(milliseconds: 1500),
 
-              padding: EdgeInsets.only(top: mainProvider.scrollAnimationPadding),
+                 padding: EdgeInsets.only(top: consumerMainProvider.scrollAnimationPadding),
 
-              child: AnimatedOpacity(
-                duration: const Duration(seconds: 2),
-                opacity: mainProvider.scrollAnimationPadding == 0 ? 1 : 0,
+                 child: AnimatedOpacity(
+                   duration: const Duration(seconds: 2),
+                   opacity: consumerMainProvider.scrollAnimationPadding == 0 ? 1 : 0,
 
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.stretch,
 
-                  children: [
-                    const AppBarSection(),
+                     children: [
+                       const AppBarSection(),
 
-                    const HeaderSection(),
+                       const HeaderSection(),
 
-                    const ExperienceSection(),
+                       const ExperienceSection(),
 
-                    const ProjectsSection(),
+                       const ProjectsSection(),
 
-                    const SkillsSection(),
+                       const SkillsSection(),
 
-                    const AboutMeSection(),
+                       const AboutMeSection(),
 
-                    ContactSection(mainProvider: mainProvider),
-                  ],
-                ),
-              ),
+                       ContactSection(mainProvider: consumerMainProvider),
+                     ],
+                   ),
+                 ),
+               );
+              }
             ),
           ),
         ),

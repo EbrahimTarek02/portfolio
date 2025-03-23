@@ -136,6 +136,52 @@ class HeaderMobileView extends StatelessWidget {
             IconButton(
                 onPressed: (){
                   try {
+                    launchUrl(Uri.parse("https://wa.me/+201122935123"), mode: LaunchMode.externalApplication);
+                  }
+                  catch (_) {
+                    showDialog(context: context, builder: (context) => DefaultAlertDialog(
+                      context: context,
+                      title: "Error",
+                      description: "Something went wrong. Please, try again later.",
+                    ));
+                  }
+                },
+
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.secondaryBackgroundColor,
+                    minimumSize: Size.zero,
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap
+                ),
+
+                icon: const DefaultImage(image: AppAssets.whatsappIcon, iconColor: AppColors.primaryColor, height: 20)
+            ),
+
+            IconButton(
+                onPressed: (){
+                  try {
+                    launchUrl(Uri.parse("tel:+201122935123"), mode: LaunchMode.externalApplication);
+                  }
+                  catch (_) {
+                    showDialog(context: context, builder: (context) => DefaultAlertDialog(
+                      context: context,
+                      title: "Error",
+                      description: "Something went wrong. Please, try again later.",
+                    ));
+                  }
+                },
+
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.secondaryBackgroundColor,
+                    minimumSize: Size.zero,
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap
+                ),
+
+                icon: const Icon(Icons.call, color: AppColors.primaryColor, size: 20)
+            ),
+
+            IconButton(
+                onPressed: (){
+                  try {
                     launchUrl(Uri.parse("https://www.linkedin.com/in/ebrahim-tarek-00349a21b"), mode: LaunchMode.externalApplication);
                   }
                   catch (_) {
