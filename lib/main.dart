@@ -1,21 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/main/provider/main_provider.dart';
 import 'package:portfolio/main/ui/main_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        systemNavigationBarDividerColor: Colors.transparent,
-        systemNavigationBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.light,
-        systemNavigationBarIconBrightness: Brightness.light
-      )
-  );
-
   runApp(
     ChangeNotifierProvider<MainProvider>(
       create: (context) => MainProvider(),
