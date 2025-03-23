@@ -5,9 +5,9 @@ import 'package:portfolio/main/data/repos/contact_repo.dart';
 class MainProvider extends ChangeNotifier {
   ContactRepo contactRepo = ContactRepo();
 
-  double scrollAnimationPadding = 150;
-
   ScrollController controller = ScrollController();
+
+  bool isHeaderVisible = false;
 
   bool isExperienceVisible = false;
   GlobalKey experienceKey = GlobalKey();
@@ -54,7 +54,7 @@ class MainProvider extends ChangeNotifier {
   }
 
   void animateHeader() {
-    scrollAnimationPadding = 0;
+    isHeaderVisible = true;
     notifyListeners();
   }
 

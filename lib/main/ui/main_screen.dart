@@ -31,11 +31,11 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
     mainProvider.controller.addListener(_checkWidgetPosition);
 
     Future.delayed(const Duration(seconds: 0), () {
+      mainProvider.animateHeader();
+
       if (context.width > 800) {
         mainProvider.isExperienceVisible = true;
       }
-
-      mainProvider.animateHeader();
     });
   }
 
@@ -83,37 +83,38 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
 
             child: Consumer<MainProvider>(
               builder: (context, consumerMainProvider, _) {
-               return AnimatedPadding(
-                 duration: const Duration(milliseconds: 1500),
+                return AnimatedPadding(
+                  duration: const Duration(milliseconds: 1500),
 
-                 padding: EdgeInsets.only(top: consumerMainProvider.scrollAnimationPadding),
+                  padding: EdgeInsets.only(top: consumerMainProvider.isHeaderVisible ? 0 : 150),
 
-                 child: AnimatedOpacity(
-                   duration: const Duration(seconds: 2),
-                   opacity: consumerMainProvider.scrollAnimationPadding == 0 ? 1 : 0,
+                  child: AnimatedOpacity(
+                    duration: const Duration(seconds: 2),
 
-                   child: Column(
-                     crossAxisAlignment: CrossAxisAlignment.stretch,
+                    opacity: consumerMainProvider.isHeaderVisible ? 1 : 0,
 
-                     children: [
-                       const AppBarSection(),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
 
-                       const HeaderSection(),
+                      children: [
+                        const AppBarSection(),
 
-                       const ExperienceSection(),
+                        const HeaderSection(),
 
-                       const ProjectsSection(),
+                        const ExperienceSection(),
 
-                       const SkillsSection(),
+                        const ProjectsSection(),
 
-                       const AboutMeSection(),
+                        const SkillsSection(),
 
-                       ContactSection(mainProvider: consumerMainProvider),
-                     ],
-                   ),
-                 ),
-               );
-              }
+                        const AboutMeSection(),
+
+                        ContactSection(mainProvider: consumerMainProvider),
+                      ],
+                    ),
+                  ),
+                );
+              },
             ),
           ),
         ),
