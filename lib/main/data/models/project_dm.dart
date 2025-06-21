@@ -26,10 +26,20 @@ class ProjectDm {
 
   static const List<ProjectDm> projects = [
     ProjectDm(
+        image: AppAssets.oscarProjectImage,
+        title: "Oscar Grand Stores App",
+        description: "Oscar Grand Stores is a grocery shopping app.",
+        googlePlay: "https://play.google.com/store/apps/details?id=com.zazome.oscarstore",
+        appStore: "https://apps.apple.com/eg/app/oscar-grand-stores/id6747345648",
+        technologies: ["APIs", "Payment", "Localization", "Firebase", "Notifications", "Maps"]
+    ),
+
+    ProjectDm(
       image: AppAssets.imtenanProjectImage,
       title: "Imtenan App",
-      description: "Imtenan is an e-commerce app available on Google Play, offering premium honey and healthy food.",
-      googlePlay: "https://play.google.com/store/apps/details?id=com.Zazome.Imtenan",
+      description: "Imtenan is an e-commerce app offering premium honey and healthy food.",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.zazome.test",
+      appStore: "https://apps.apple.com/eg/app/imtenan/id6746721189",
       technologies: ["APIs", "Payment", "Localization"]
     ),
 

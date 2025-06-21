@@ -2,6 +2,7 @@ abstract class AppAssets {
   static const String _imagesPath = "assets/";
 
   static const String headerImage = "${_imagesPath}header_image.jpg";
+  static const String oscarProjectImage = "${_imagesPath}oscar_grand_stores.png";
   static const String imtenanProjectImage = "${_imagesPath}imtenan_project_image.jpeg";
   static const String eCommerceProjectImage = "${_imagesPath}e_commerce_project_image.jpeg";
   static const String moviesProjectImage = "${_imagesPath}movies_project_image.jpeg";
